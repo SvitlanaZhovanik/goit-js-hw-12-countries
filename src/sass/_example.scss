@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.5;
+  color: #2a2a2a;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.input {
+    border:1px solid #9E9E9E;
+    color: #000000;
+    padding: 3px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    background: #FFF;
+    width: 500px;
+}
+.card{
+    margin: 50px;
+    width: 700px;
+    font-size: 23px;
+}
+.card__title {
+    text-align: center;
+    font-size: 60px;
+}
+.card__wrapper{
+    display: flex;
+}
+.card__info {
+    margin-right: 70px;
+}
