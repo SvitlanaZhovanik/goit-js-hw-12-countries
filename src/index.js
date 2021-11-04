@@ -4,7 +4,9 @@ import countryCardTpl from './templates/country-card.hbs'
 import countrylistTpl from './templates/country-list.hbs'
 import fetchCountries from "./fetchCountries.js"
 import debounce  from 'lodash.debounce';
-import {error} from '@pnotify/core'
+import {error} from '@pnotify/core';
+import '@pnotify/core/dist/PNotify.css';
+import '@pnotify/core/dist/BrightTheme.css'
 
 const inputRef = document.querySelector("input");
 const cardWrapper = document.querySelector('.wrapper');
@@ -18,8 +20,11 @@ function onInputClick(evt) {
 function countryRender(countries) {
     cardWrapper.innerHTML = ' ';
 if (countries.length > 10) {
-    error({
-        text: "Too many matches found. Please enter a more specific query!",  
+    error({title: false,
+        text: "Too many matches found. Please enter a more specific query!", 
+        shadow: true,
+        stiker: false,
+        delay: 3000, 
        })
       
 } else if(countries.length > 1 && countries.length <= 10){
